@@ -11,7 +11,7 @@ This is a helper library for play framework Scala. It allows you to use Play int
 #### Dependency
 Add those resolver and dependency to `build.sbt`:<br>
 **Currently it only supports Play Framework 2.5.x**
-```
+```scala
 // Adding resolver
 resolvers += "EJISAN" at "https://ejisan.github.io/repo/"
 // Adding dependency
@@ -53,16 +53,16 @@ hello = Hello!
 hello.myNameIs = Hello! My name is {0} {1}!
 ```
 
-```
+```js
 $m("hello")
-=> Hello!
+// => Hello!
 
 // Message pattern is supported.
 $m("hello.myNameIs", "Foo", "Bar")
-=> Hello! My name is Foo Bar!
+// => Hello! My name is Foo Bar!
 
 // Message pattern without parameters,
 // formats will be replaced to '?' symbol.
 $m("hello.myNameIs")
-=> Hello! My name is ? ?!
+// => Hello! My name is ? ?!
 ```
